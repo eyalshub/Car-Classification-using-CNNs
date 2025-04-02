@@ -1,44 +1,46 @@
-# Car Classification using CNNs 🚗
+# Car Classification with Deep Learning CNNs 🚗
 
-This project focuses on fine-grained car classification using the **Stanford Cars Dataset**, leveraging Convolutional Neural Networks (CNNs) and advanced training techniques to improve model performance.
+This repository contains a comprehensive deep learning project for classifying car images into 196 categories. The project emphasizes data exploration, model development, and experimental evaluation, showcasing a robust approach to image classification
+This repository contains a comprehensive deep learning project for classifying car images into 196 categories. The project emphasizes data exploration, model development, and experimental evaluation, showcasing a robust approach to image classification.
 
-## 📂 Dataset Overview
-- **Total Training Images:** 8144  
-- **Total Test Images:** 8040  
-- **Unique Classes:** 196 (different car models)  
-- **Image Format:** High-resolution RGB images with bounding boxes  
-- **Preprocessing:** Cropped and resized to 224x224  
-- **Augmentation:**  
-  - Random rotations and flips  
-  - Color adjustments (brightness, contrast, hue)  
+## Project Structure
 
-## 🧠 Models & Techniques
-We experimented with multiple architectures and optimization strategies:
-- **CNN Architectures:**  
-  - ResNet-50: **81.71% Test Accuracy**  
-  - VGG-16: **55.03% Test Accuracy**  
-  - DenseNet-121: **79.08% Test Accuracy**  
-  - EfficientNet: **77.1% Test Accuracy**  
+The project is organized into the following primary files:
 
-- **Optimization Techniques:**  
-  - Learning Rate Scheduler: Improved test accuracy to **23.7%** in early experiments  
-  - Gradient Clipping: Helped stabilize training and reduced overfitting  
-  - Inference-Time Augmentation: Boosted test accuracy to **23.7%**  
-  - Feature Extraction + Random Forest: **23.39% Test Accuracy**  
+### 1. Exploratory Data Analysis (`anlaize_car.ipynb`)
+- Conducts a detailed analysis of the Stanford Cars dataset.
+- Visualizes data distributions, class imbalances, and image characteristics.
+- Prepares data for training, including preprocessing and augmentation.
 
-## ⏳ Results & Insights
-- **Best Model:** ResNet-50 with **81.71% Test Accuracy**  
-- **Training Time:** Between 22-35 minutes per model  
-- **Challenges:**  
-  - Imbalance in class samples (min: 24, max: 68)  
-  - Computational limitations for deeper architectures  
-  - Fine-grained classification required careful tuning of augmentation and hyperparameters  
+### 2. Model Development (`modal_cnn.ipynb` and `Advanced models.ipynb`)
+- Implements and fine-tunes multiple neural network architectures for car classification.
+- Adapts pre-trained models by replacing the final layer to match the classification task.
+- Utilizes techniques like L2 regularization and gradient clipping to stabilize training.
+- Provides detailed metrics, including validation and test performance.
 
-## 🚀 Future Improvements
-- Implementing a hierarchical CNN for stage-wise feature extraction  
-- Using more powerful GPUs to train larger models  
-- Exploring Vision Transformers (ViT) for enhanced performance  
+### 3. Experiments and Report (`Report.pdf`)
+- Documents hyperparameter tuning and comparative analysis of different architectures.
+- Evaluates model behavior across iterations, identifying performance bottlenecks.
+- Offers insights into challenges faced during training and potential improvements.
 
-## 📝 Authors
-- Eyal Shubeli
-- Nadav Toledo  
+### 4. Documentation (`README.md`)
+- Overview of the project, dataset, and implementation details.
+
+## Dataset
+
+The project uses the **Stanford Cars Dataset**, which contains **16,185 images** of cars categorized into **196 classes**. Images are annotated with class labels, making it suitable for supervised learning tasks.
+
+## Key Features
+
+- Hands-on implementation and fine-tuning of deep learning architectures.
+- Extensive use of regularization and training stabilization techniques.
+- Comparative analysis of models to evaluate performance across multiple metrics.
+- Exploration of computational limitations and creative solutions to improve results.
+
+## How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/NadavToledo1/Cars-Classification.git
+cd car-classification
